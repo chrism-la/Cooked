@@ -13,7 +13,7 @@ app.use(cors());
 // Database
 
 mongoose
-    .connect('mongodb://127.0.0.1:27017/cooked')
+    .connect(process.env.MONG_URI)
     .then(() => console.log('Connected to DB'))
     .catch(console.error);
 
