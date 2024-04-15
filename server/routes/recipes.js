@@ -3,6 +3,8 @@ const router = express.Router();
 const Recipe = require('../models/Recipes');
 
 // ROUTE HANDLERS
+
+// GET all recipes
 router.get('/', async (req, res) => {
     const recipes = await Recipe.find();
     res.json(recipes);
