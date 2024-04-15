@@ -9,18 +9,26 @@ router.get('/', async (req, res) => {
 });
 
 // GET a single recipe
-router.get('/:id', (req, res) => {
-    res.json({ mssg: 'GET a single recipe' });
+router.get('/:id', async (req, res) => {
+    const recipe = await Recipe.findById(req.params.id);
+    res.json(recipe);
 });
 
 // POST a new recipe
-router.post('/', (req, res) => {
-    res.json({ mssg: 'POST a new recipe' });
+router.post('/new', (req, res) => {
+    const recipe = new Recipe({
+        text: req.body.text,
+    });
+
+    recipe.save();
+
+    res.json(recipe);
 });
 
 // DELETE a recipe
-router.delete('/:id', (req, res) => {
-    res.json({ mssg: 'DELETE a recipe' });
+router.delete('/delete/:id', async (req, res) => {
+    const result = await Recipe.findByIdAndDelete(req.params.id);
+    res.json(result);
 });
 
 // UPDATE a recipe
