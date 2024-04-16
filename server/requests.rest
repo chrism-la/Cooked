@@ -15,11 +15,11 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:4000/api/recipes/delete/661e405807ef8bc4051c59e6
+DELETE http://localhost:4000/api/recipes/delete/661e428a6a7ed9a9cc242022
 
 ###
 
-PATCH http://localhost:4000/api/recipes/update/661e428a6a7ed9a9cc242022
+PATCH http://localhost:4000/api/recipes/update/661eed1512d32ac5b2f29982
 Content-Type: application/json
 
 {

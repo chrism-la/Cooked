@@ -1,7 +1,4 @@
-@mixin vertical-center {
-    display: flex;
-    align-items: center;
-}
+// FONT FAMILY
 
 @mixin regular-font {
     font-family: 'Poppins', sans-serif;
@@ -19,4 +16,17 @@
     font-family: 'Style Script', cursive;
     font-weight: 400;
     font-style: normal;
+}
+
+// POSITIONING
+
+@mixin vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin position-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

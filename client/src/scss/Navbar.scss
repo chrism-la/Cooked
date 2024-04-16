@@ -1,43 +1,69 @@
 @import './variables';
 @import './mixins';
 
-svg {
-    font-size: 24px;
-    color: $primary-color;
+.blog-banner {
+    width: 100%;
+    height: 48px;
+    background-color: $primary-color;
+    @include position-center;
+    p {
+        @include bold-font;
+        font-size: 18px;
+        letter-spacing: 3px;
+        color: $secondary-color;
+        a {
+            color: white;
+        }
+    }
 }
+
 header {
-    padding: 0 20px;
-    background-color: $background-color;
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 3px solid $primary-color;
-}
-
-.title {
-    @include style-script;
-    font-weight: bold;
-    font-size: 36px;
-}
-
-.logo {
-    color: $main-text-color;
-    @include vertical-center;
-    @include bold-font;
-}
-
-.container2 {
-    color: $main-text-color;
-    @include vertical-center;
-    justify-content: space-between;
-    font-size: 18px;
-}
-
-.login {
-    color: $main-text-color;
-    @include bold-font;
-}
-
-.signup {
-    color: $main-text-color;
-    @include regular-font;
+    // border-bottom: 3px solid $primary-color;
+    .title-card {
+        @include vertical-center;
+        @include bold-font;
+        letter-spacing: 3px;
+        color: $main-text-color;
+        .title {
+            @include style-script;
+            font-weight: bold;
+            font-size: 36px;
+        }
+        .utensil-logo {
+            font-size: 36px;
+            color: $primary-color;
+        }
+    }
+    .container2 {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        letter-spacing: 2px;
+        a {
+            color: $main-text-color;
+            @include bold-font;
+            font-size: 18px;
+            &:hover {
+                color: $secondary-color;
+                border-bottom: 3px solid $primary-color;
+                transition: 0.5s;
+            }
+        }
+    }
+    .container3 {
+        width: 95px;
+        @include vertical-center;
+        justify-content: space-between;
+        letter-spacing: 2px;
+        color: $main-text-color;
+        font-size: 16px;
+        .login {
+            color: $main-text-color;
+            @include bold-font;
+        }
+    }
 }
