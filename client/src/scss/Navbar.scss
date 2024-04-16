@@ -1,10 +1,33 @@
 @import './variables';
+@import './mixins';
 
 header {
+    padding: 0 20px;
     background-color: $background-color;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid $primary-color;
 }
 
 .logo {
     color: $main-text-color;
-    text-decoration: none;
+    @include vertical-center;
+    @include bold-font;
+}
+
+.container2 {
+    color: $main-text-color;
+    @include vertical-center;
+    justify-content: space-between;
+    font-size: 18px;
+}
+
+.login {
+    color: $main-text-color;
+    @include bold-font;
+}
+
+.signup {
+    color: $main-text-color;
+    @include regular-font;
 }

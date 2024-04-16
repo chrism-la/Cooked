@@ -12,9 +12,17 @@ export default function Navbar() {
                     <h1 className="title">CookBook</h1>
                 </Link>
             </div>
-            <div className="container 2">
-                <Link to="/">LogIn</Link>
-                <Link to="/">SignUp</Link>
+            <div className="container2">
+                <div>
+                    <Link className="login" to="/">
+                        LogIn
+                    </Link>
+                </div>
+                <div>
+                    <Link className="signup" to="/">
+                        SignUp
+                    </Link>
+                </div>
                 <FontAwesomeIcon icon={faUser} />
             </div>
         </header>
