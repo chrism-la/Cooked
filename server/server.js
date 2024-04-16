@@ -1,27 +1,28 @@
-const express = require('express');
-const cors = require('cors');
-const mongoose = require('mongoose');
 require('dotenv').config();
 
-// Express
+const express = require('express');
+const mongoose = require('mongoose');
+const recipeRoutes = require ('./routes/recipes')
 
+// Express
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
+app.use((req, res, next) =>{
+    console.log(req.path, req.method)
+    next()
+})
+
+// Routes
+app.use('/api/recipes', recipeRoutes);
 
 // Database
-
 mongoose
     .connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to DB'))
     .catch(console.error);
 
-// Routes
-
-const recipesRoutes = require('./routes/recipes');
-
-app.use('/recipes', recipesRoutes);
 
 // Port
 
