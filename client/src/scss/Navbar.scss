@@ -25,7 +25,7 @@ header {
     .title-card {
         @include vertical-center;
         @include bold-font;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         color: $main-text-color;
         .title {
             @include style-script;
@@ -50,7 +50,7 @@ header {
             &:hover {
                 color: $secondary-color;
                 border-bottom: 3px solid $primary-color;
-                transition: 0.5s;
+                transition: 0.1s;
             }
         }
     }
