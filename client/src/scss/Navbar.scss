@@ -1,6 +1,10 @@
 @import './variables';
 
+header {
+    background-color: $background-color;
+}
+
 .logo {
-    color: black;
+    color: $main-text-color;
     text-decoration: none;
 }
