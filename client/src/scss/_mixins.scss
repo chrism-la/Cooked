@@ -14,3 +14,9 @@
     font-weight: 700;
     font-style: normal;
 }
+
+@mixin style-script {
+    font-family: 'Style Script', cursive;
+    font-weight: 400;
+    font-style: normal;
+}

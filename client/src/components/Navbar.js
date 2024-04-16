@@ -9,7 +9,8 @@ export default function Navbar() {
             <div className="container">
                 <Link className="logo" to="/">
                     <FontAwesomeIcon icon={faUtensils} />
-                    <h1 className="title">CookBook</h1>
+                    <h1 className="title">Cook</h1>
+                    <h2>Book</h2>
                 </Link>
             </div>
             <div className="container2">

@@ -1,12 +1,22 @@
 @import './variables';
 @import './mixins';
 
+svg {
+    font-size: 24px;
+    color: $primary-color;
+}
 header {
     padding: 0 20px;
     background-color: $background-color;
     display: flex;
     justify-content: space-between;
     border-bottom: 3px solid $primary-color;
+}
+
+.title {
+    @include style-script;
+    font-weight: bold;
+    font-size: 36px;
 }
 
 .logo {
