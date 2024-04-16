@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faUtensils, faUser } from '@fortawesome/free-solid-svg-icons';
 
 export default function Navbar() {
     return (
@@ -8,7 +8,13 @@ export default function Navbar() {
             <div className="container">
                 <Link to="/">
                     <FontAwesomeIcon icon={faUtensils} />
+                    <h1 className="title">CookBook</h1>
                 </Link>
+            </div>
+            <div className="container 2">
+                <Link to="/">LogIn</Link>
+                <Link to="/">SignUp</Link>
+                <FontAwesomeIcon icon={faUser} />
             </div>
         </header>
     );
