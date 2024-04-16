@@ -1,18 +1,20 @@
 require('dotenv').config();
-
 const express = require('express');
 const mongoose = require('mongoose');
-const recipeRoutes = require ('./routes/recipes')
+const cors = require('cors');
+const recipeRoutes = require('./routes/recipes');
 
-// Express
+// Express Settings
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
-app.use((req, res, next) =>{
-    console.log(req.path, req.method)
-    next()
-})
+// Middleware
+app.use((req, res, next) => {
+    console.log(req.path, req.method);
+    next();
+});
 
 // Routes
 app.use('/api/recipes', recipeRoutes);
@@ -22,7 +24,6 @@ mongoose
     .connect(process.env.MONGO_URI)
     .then(() => console.log('Connected to DB'))
     .catch(console.error);
-
 
 // Port
 

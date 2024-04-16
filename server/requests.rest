@@ -1,22 +1,27 @@
-GET http://localhost:4000/recipes
+GET http://localhost:4000/api/recipes
 
 ###
 
-GET http://localhost:4000/recipes/661d865776681f8db2f44e5a
+GET http://localhost:4000/api/recipes/661d865776681f8db2f44e5a
 
 ###
 
-POST http://localhost:4000/recipes/new
+POST http://localhost:4000/api/recipes/new
 Content-Type: application/json
 
 {
-  "text": "Newest Recipe"
+  "text": "New Recipe"
 }
 
 ###
 
-DELETE http://localhost:4000/recipes/delete/661d84f80bdd800b46840ce2
+DELETE http://localhost:4000/api/recipes/delete/661e405807ef8bc4051c59e6
 
 ###
 
-UPDATE http://localhost:4000/recipes/:id
+PATCH http://localhost:4000/api/recipes/update/661e428a6a7ed9a9cc242022
+Content-Type: application/json
+
+{
+  "text": "Updated Recipe"
+}
