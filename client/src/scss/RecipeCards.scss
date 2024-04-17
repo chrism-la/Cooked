@@ -6,7 +6,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 20px 300px;
 
     .recipe-cards {
         display: flex;
@@ -14,7 +14,7 @@
         align-items: center;
         padding: 10px;
         border: 1px solid $background-color;
-        border-radius: 8px;
+        border-radius: 2px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
         .img-card {

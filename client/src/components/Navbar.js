@@ -25,7 +25,7 @@ export default function Navbar() {
                     <Link className="nav-link" to="/">
                         HOME
                     </Link>
-                    <Link className="nav-link" to="/">
+                    <Link className="nav-link" to="/recipes">
                         RECIPES
                     </Link>
                     <Link className="nav-link" to="/">

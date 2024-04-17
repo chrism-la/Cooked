@@ -2,6 +2,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import RecipeCards from './RecipeCards';
+import '../scss/Searchbar.scss';
 
 export default function Searchbar() {
     const [jsonData, setJsonData] = useState([]);
@@ -25,13 +26,17 @@ export default function Searchbar() {
 
     return (
         <>
-            <Form onSubmit={handleSearch}>
-                <Form.Control type="text" placeholder="Search Recipes.." value={search} onChange={(e) => setSearch(e.target.value)} />
+            <div className="search-box">
+                <div className="search-container">
+                    <Form onSubmit={handleSearch}>
+                        <Form.Control className="search-input" type="text" placeholder="Search Recipes.." value={search} onChange={(e) => setSearch(e.target.value)} />
 
-                <Button type="submit" style={{ backgroundColor: 'lightblue', borderColor: '#7adda0' }}>
-                    Search
-                </Button>
-            </Form>
+                        <Button className="search-button" type="submit">
+                            Search
+                        </Button>
+                    </Form>
+                </div>
+            </div>
             <RecipeCards filteredData={filteredData} />
         </>
     );
