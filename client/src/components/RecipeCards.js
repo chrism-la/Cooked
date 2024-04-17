@@ -1,17 +1,14 @@
-import { Card, Row, Col } from 'react-bootstrap';
+import '../scss/RecipeCards.scss';
 
 export default function RecipeCards({ filteredData }) {
     return (
-        <div className="container">
-            <Row>
-                {filteredData.map((recipe, index) => (
-                    <Col key={index} xs={12} sm={6} md={4} lg={4} xl={4}>
-                        <Card>
-                            <Card.Img variant="top" src={recipe.image} alt="recipes" />
-                        </Card>
-                    </Col>
-                ))}
-            </Row>
+        <div className="recipe-cards">
+            {filteredData.map((recipe) => (
+                <div className="img-card">
+                    <img src={recipe.image} alt="Recipe Images"></img>
+                    <h2>{recipe.name}</h2>
+                </div>
+            ))}
         </div>
     );
 }

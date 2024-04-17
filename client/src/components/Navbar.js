@@ -29,9 +29,6 @@ export default function Navbar() {
                         RECIPES
                     </Link>
                     <Link className="nav-link" to="/">
-                        NEWS
-                    </Link>
-                    <Link className="nav-link" to="/">
                         ABOUT US
                     </Link>
                 </nav>

@@ -1,7 +1,5 @@
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { useState } from 'react';
 import RecipeCards from './RecipeCards';
 
@@ -28,16 +26,11 @@ export default function Searchbar() {
     return (
         <>
             <Form onSubmit={handleSearch}>
-                <Row className="row">
-                    <Col xs="" style={{ paddingLeft: '30px' }}>
-                        <Form.Control type="text" placeholder="Search" className="mr-sm-2" value={search} onChange={(e) => setSearch(e.target.value)} />
-                    </Col>
-                    <Col xs="auto">
-                        <Button type="submit" style={{ backgroundColor: 'lightblue', borderColor: '#7adda0' }}>
-                            Search
-                        </Button>
-                    </Col>
-                </Row>
+                <Form.Control type="text" placeholder="Search Recipes.." value={search} onChange={(e) => setSearch(e.target.value)} />
+
+                <Button type="submit" style={{ backgroundColor: 'lightblue', borderColor: '#7adda0' }}>
+                    Search
+                </Button>
             </Form>
 
             <RecipeCards filteredData={filteredData} />
