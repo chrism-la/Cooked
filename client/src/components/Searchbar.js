@@ -32,7 +32,6 @@ export default function Searchbar() {
                     Search
                 </Button>
             </Form>
-
             <RecipeCards filteredData={filteredData} />
         </>
     );
