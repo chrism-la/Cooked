@@ -1,0 +1,25 @@
+@import './variables';
+@import './mixins';
+
+.card-container {
+    width: 100%;
+    height: 600px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.pexels.com/photos/4033327/pexels-photo-4033327.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    .card {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        @include position-center;
+        .card-title {
+            @include bold-font;
+            p {
+                font-size: 24px; // Adjust font size as needed
+                color: white; // Set text color to white
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
