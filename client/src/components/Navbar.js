@@ -21,21 +21,21 @@ export default function Navbar() {
                         <FontAwesomeIcon className="utensil-logo" icon={faUtensils} />
                     </Link>
                 </div>
-                <div className="container2">
-                    <Link className="home" to="/">
+                <nav>
+                    <Link className="nav-link" to="/">
                         HOME
                     </Link>
-                    <Link className="recipes" to="/">
+                    <Link className="nav-link" to="/">
                         RECIPES
                     </Link>
-                    <Link className="news" to="/">
+                    <Link className="nav-link" to="/">
                         NEWS
                     </Link>
-                    <Link className="about Us" to="/">
+                    <Link className="nav-link" to="/">
                         ABOUT US
                     </Link>
-                </div>
-                <div className="container3">
+                </nav>
+                <div className="login-container">
                     <FontAwesomeIcon className="user-logo" icon={faUser} />
                     <Link className="login" to="/">
                         LOGIN
