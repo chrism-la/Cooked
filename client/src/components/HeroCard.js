@@ -5,7 +5,8 @@ export default function HeroCard() {
         <>
             <div className="banner">Your Official Recipe Book Magazine</div>
             <div className="card-container">
-                <div className="img-container"></div>;<div className="featured-news-card"></div>
+                <div className="img-container"></div>
+                <div className="blog-post">18 Favorite Grilled Chicken Recipes</div>
             </div>
         </>
     );
