@@ -15,6 +15,9 @@ export default function RecipeCards({ filteredData }) {
                         <img src={recipe.image} alt="Recipe Images"></img>
                     </div>
                     <h2>{recipe.name}</h2>
+                    <h2>{recipe.rating}</h2>
+                    <h2>{recipe.ingredients}</h2>
+                    <h2>{recipe.directions}</h2>
                 </div>
             ))}
         </div>

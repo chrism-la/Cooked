@@ -7,6 +7,9 @@ const getRecipes = async (req, res) => {
     const recipes = foundRecipes.map((recipe) => ({
         name: recipe.name,
         image: recipe.image,
+        rating: recipe.rating,
+        ingredients: recipe.ingredients,
+        directions: recipe.directions,
     }));
     res.status(200).json(recipes);
 };
@@ -30,11 +33,11 @@ const getRecipe = async (req, res) => {
 
 // create new recipe
 const createRecipe = async (req, res) => {
-    const { name, image } = req.body;
+    const { name, image, rating, ingredients, directions } = req.body;
 
     // add doc to db
     try {
-        const recipe = await Recipe.create({ name, image });
+        const recipe = await Recipe.create({ name, image, rating, ingredients, directions });
         res.status(200).json(recipe);
     } catch (error) {
         res.status(400).json({ error: error.message });
