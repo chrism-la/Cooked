@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const recipeRoutes = require('./routes/recipes');
+const userRoutes = require('./routes/user');
 
 // Express Settings
 const app = express();
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
 
 // Routes
 app.use('/api/recipes', recipeRoutes);
+app.use('/api/user', userRoutes);
 
 // Database
 mongoose
