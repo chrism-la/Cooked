@@ -1,3 +1,5 @@
+import ShowCard from '../components/ShowCard';
+
 export default function Show() {
-    return <h1>Show</h1>;
+    return <ShowCard />;
 }
