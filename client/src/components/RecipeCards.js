@@ -10,7 +10,7 @@ export default function RecipeCards({ filteredData }) {
     return (
         <div className="recipe-container">
             {filteredData.map((recipe) => (
-                <div className="recipe-cards">
+                <div className="recipe-cards" key={recipe._id}>
                     <div className="img-card" onClick={() => handleCardClick(recipe)}>
                         <img src={recipe.image} alt="Recipe Images"></img>
                     </div>

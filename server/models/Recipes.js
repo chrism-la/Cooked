@@ -23,7 +23,7 @@ const recipeSchema = new Schema(
         directions: {
             type: String,
             required: true,
-        }
+        },
     },
     { timestamps: true }
 );

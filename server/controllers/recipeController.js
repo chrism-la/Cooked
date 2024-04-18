@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const getRecipes = async (req, res) => {
     const foundRecipes = await Recipe.find({}).sort({ createdAt: -1 });
     const recipes = foundRecipes.map((recipe) => ({
+        _id: recipe.id,
         name: recipe.name,
         image: recipe.image,
         rating: recipe.rating,
