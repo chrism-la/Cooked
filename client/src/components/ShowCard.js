@@ -1,5 +1,5 @@
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import '../scss/ShowCard.scss';
 
 export default function ShowCard({ recipeData }) {
     return (
@@ -12,39 +12,15 @@ export default function ShowCard({ recipeData }) {
                 </div>
             </div>
             <div className="img-card"></div>
-            <Card className="row justify-content-center mx-auto w-50 min-vw-50 p-2">
+            <Card>
                 <Card.Img variant="top" src={recipeData.image} alt={recipeData.image} />
                 <Card.Body>
                     <Card.Title className="text-center">{recipeData.name}</Card.Title>
                     <Card.Text className="text-center">
                         {recipeData.rating}
-                        {recipeData.description}
+                        {recipeData.ingredients}
+                        {recipeData.directions}
                     </Card.Text>
-                    <div style={{ display: 'inline-flex' }}>
-                        <Button
-                            type=""
-                            style={{
-                                backgroundColor: '#7aada0',
-                                border: '2px solid #d6d6d6',
-                                padding: '5px',
-                                marginLeft: '2px',
-                            }}
-                        >
-                            Delete
-                        </Button>
-                        <Button
-                            type=""
-                            className=""
-                            style={{
-                                backgroundColor: '#7aada0',
-                                border: '2px solid #d6d6d6',
-                                padding: '5px',
-                                marginLeft: '2px',
-                            }}
-                        >
-                            Update
-                        </Button>
-                    </div>
                 </Card.Body>
             </Card>
         </>
