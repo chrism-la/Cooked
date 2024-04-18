@@ -8,7 +8,7 @@
     @include position-center;
     p {
         @include bold-font;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 3px;
         color: $secondary-color;
         a {
