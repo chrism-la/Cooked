@@ -12,6 +12,18 @@ const recipeSchema = new Schema(
             type: String,
             required: true,
         },
+        rating: {
+            type: Number,
+            required: false,
+        },
+        ingredients: {
+            type: String,
+            required: true,
+        },
+        directions: {
+            type: String,
+            required: true,
+        }
     },
     { timestamps: true }
 );
