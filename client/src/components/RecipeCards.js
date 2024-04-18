@@ -4,8 +4,8 @@ import { useNavigate } from 'react-router-dom';
 export default function RecipeCards({ filteredData }) {
     const navigate = useNavigate();
 
-    const handleCardClick = (imageData) => {
-        navigate('/show', { state: { imageData } });
+    const handleCardClick = (recipeData) => {
+        navigate('/show', { state: { recipeData } });
     };
     return (
         <div className="recipe-container">
