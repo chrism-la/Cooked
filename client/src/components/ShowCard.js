@@ -1,16 +1,10 @@
 import Card from 'react-bootstrap/Card';
 import '../scss/ShowCard.scss';
 
+
 export default function ShowCard({ recipeData }) {
     return (
         <>
-            <div className="blog-banner">
-                <div>
-                    <p>
-                        JOIN OUR BLOG. <a href="/">SIGN UP </a>
-                    </p>
-                </div>
-            </div>
             <div className="img-card"></div>
             <Card>
                 <Card.Img variant="top" src={recipeData.image} alt={recipeData.image} />
@@ -23,6 +17,7 @@ export default function ShowCard({ recipeData }) {
                     </Card.Text>
                 </Card.Body>
             </Card>
+            
         </>
     );
 }
