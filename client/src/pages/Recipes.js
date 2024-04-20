@@ -2,6 +2,7 @@ import Navbar from '../components/Navbar';
 import Searchbar from '../components/Searchbar';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 export const RecipeContext = React.createContext();
 
@@ -45,6 +46,7 @@ export default function Recipes() {
                         ))}
                 </div>
             </RecipeContext.Provider>
+            <Footer/>
         </>
     );
 }
