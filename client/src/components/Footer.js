@@ -14,16 +14,11 @@ export default function Footer() {
             </div>
             <div className="footerNav">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">News</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Our Team</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/recipes">Recipes</a></li>
+                    <li><a href="/">About Us</a></li>
                 </ul>
             </div>
-        </div>
-        <div className="footerBottom">
-            <p>Copyright &copy;2022 Designed by <span>JCJEZ</span></p>
         </div>
     </footer>
 );

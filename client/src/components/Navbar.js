@@ -34,7 +34,7 @@ export default function Navbar() {
                 </nav>
                 <div className="login-container">
                     <FontAwesomeIcon className="user-logo" icon={faUser} />
-                    <Link className="login" to="/">
+                    <Link className="login" to="/login">
                         LOGIN
                     </Link>
                 </div>
