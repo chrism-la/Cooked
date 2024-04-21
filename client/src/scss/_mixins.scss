@@ -25,6 +25,11 @@
     align-items: center;
 }
 
+@mixin horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+
 @mixin position-center {
     display: flex;
     justify-content: center;
