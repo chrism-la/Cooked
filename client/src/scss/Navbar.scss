@@ -10,9 +10,14 @@
         @include bold-font;
         font-size: 16px;
         letter-spacing: 3px;
-        color: $secondary-color;
+        color: white;
         a {
-            color: white;
+            color: $secondary-color;
+            &:hover {
+                opacity: 1;
+                color: white;
+                transition: 0.5s;
+            }
         }
     }
 }

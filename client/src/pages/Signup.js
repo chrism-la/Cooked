@@ -4,7 +4,6 @@ import '../scss/Login.scss';
 export default function SignupForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [remember, setRemember] = useState(false);
 
     const handleSubmit = (event) => {
         event.preventDefault();
