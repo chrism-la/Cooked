@@ -8,13 +8,11 @@ export default function Show() {
 
     const recipeData = location.state?.recipeData || {};
 
-    return ( 
-    <>
-    <Navbar />
-    <ShowCard recipeData={recipeData} />
-    <div>
-        <Footer />
-    </div>
-    </>
+    return (
+        <>
+            <Navbar />
+            <ShowCard recipeData={recipeData} />
+            <Footer />
+        </>
     );
 }
