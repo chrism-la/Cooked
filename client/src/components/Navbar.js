@@ -45,7 +45,7 @@ export default function Navbar() {
                         LOGIN
                     </Link>
                     <div>
-                        <button className="login" onClick={handleClick}>
+                        <button className="login logout" onClick={handleClick}>
                             Log Out
                         </button>
                     </div>
