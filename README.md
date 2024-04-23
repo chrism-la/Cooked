@@ -1,5 +1,5 @@
 # Cooked #
-Welcome to Cooked, your ultimate culinary companion! Dive into a world of mouthwatering recipes curated to entice your taste buds and inspire your inner chef. Whether you're a seasoned cook or a kitchen novice, Cooked offers a treasure of delicious dishes. Say hello and embark on a flavorful journey with Cooked today! Made by Christopher Morales and Eduardo Puga.
+Welcome to Cooked, your ultimate culinary companion! Dive into a world of mouthwatering recipes curated to entice your taste buds and inspire your inner chef. Whether you're a seasoned cook or a kitchen novice, Cooked offers a treasure of delicious dishes. Say hello and embark on a flavorful journey with Cooked today. Made by Christopher Morales and Eduardo Puga.
 
 ## Table of Contents ##
 -Tech Stack
