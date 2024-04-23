@@ -21,6 +21,13 @@ app.use((req, res, next) => {
 app.use('/api/recipes', recipeRoutes);
 app.use('/api/user', userRoutes);
 
+// Use the client app
+app.use(express.static('./client/build'));
+
+app.get('/', (req, res) => {
+    return res.sendFile('./client/build/index.html');
+});
+
 // Database
 mongoose
     .connect(process.env.MONGO_URI)
