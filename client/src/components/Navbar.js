@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faUser } from '@fortawesome/free-solid-svg-icons';
 import { useLogout } from '../hooks/useLogout';
+import { useAuthContext } from '../hooks/useAuthContext';
 import '../scss/Navbar.scss';
 
 export default function Navbar() {
     const { logout } = useLogout();
+    const { user } = useAuthContext();
 
     const handleClick = () => {
         logout();
@@ -39,17 +41,24 @@ export default function Navbar() {
                         ABOUT US
                     </Link>
                 </nav>
-                <div className="login-container">
-                    <FontAwesomeIcon className="user-logo" icon={faUser} />
-                    <Link className="login" to="/login">
-                        LOGIN
-                    </Link>
-                    <div>
-                        <button className="login logout" onClick={handleClick}>
-                            Log Out
-                        </button>
+                {!user && (
+                    <div className="login-container">
+                        <FontAwesomeIcon className="user-logo" icon={faUser} />
+                        <Link className="login" to="/login">
+                            LOGIN
+                        </Link>
                     </div>
-                </div>
+                )}
+                {user && (
+                    <div className="login-container">
+                        <span>{user.email}</span>
+                        <div>
+                            <button className="login logout" onClick={handleClick}>
+                                Log Out
+                            </button>
+                        </div>
+                    </div>
+                )}
             </header>
         </>
     );
