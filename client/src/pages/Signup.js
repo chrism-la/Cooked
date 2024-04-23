@@ -1,12 +1,16 @@
 import { useState } from 'react';
+import { useSignup } from '../hooks/useSignup';
 import '../scss/Login.scss';
 
 export default function SignupForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const { signup, error, isLoading } = useSignup();
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+
+        await signup(email, password);
     };
 
     return (
@@ -23,9 +27,10 @@ export default function SignupForm() {
                         <i className="bx bxs-lock-alt"></i>
                     </div>
 
-                    <button type="submit" className="btn">
+                    <button type="submit" className="btn" disabled={isLoading}>
                         Submit
                     </button>
+                    {error && <div className="error">{error}</div>}
                 </form>
             </div>
         </div>
