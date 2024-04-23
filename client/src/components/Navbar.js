@@ -1,9 +1,16 @@
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUtensils, faUser } from '@fortawesome/free-solid-svg-icons';
+import { useLogout } from '../hooks/useLogout';
 import '../scss/Navbar.scss';
 
 export default function Navbar() {
+    const { logout } = useLogout();
+
+    const handleClick = () => {
+        logout();
+    };
+
     return (
         <>
             <div className="blog-banner">
@@ -37,6 +44,11 @@ export default function Navbar() {
                     <Link className="login" to="/login">
                         LOGIN
                     </Link>
+                    <div>
+                        <button className="login" onClick={handleClick}>
+                            Log Out
+                        </button>
+                    </div>
                 </div>
             </header>
         </>
