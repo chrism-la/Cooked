@@ -2,13 +2,14 @@
 @import './mixins';
 
 .login-background {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #db930b;
-  background-size: cover;
-  background-position: center;
+    @include bold-font;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #db930b;
+    background-size: cover;
+    background-position: center;
 }
 
 .login-wrapper {
