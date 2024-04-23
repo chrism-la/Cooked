@@ -1,13 +1,17 @@
 import { useState } from 'react';
+import { useLogin } from '../hooks/useLogin';
 import '../scss/Login.scss';
 
 export default function LoginForm() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [remember, setRemember] = useState(false);
+    const { login, error, isLoading } = useLogin();
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
+
+        await login(email, password);
     };
 
     return (
@@ -30,9 +34,10 @@ export default function LoginForm() {
                         </label>
                         <a href="/">Forgot password?</a>
                     </div>
-                    <button type="submit" className="btn">
+                    <button type="submit" className="btn" disabled={isLoading}>
                         Login
                     </button>
+                    {error && <div className="error">{error}</div>}
                     <div className="register-link">
                         <p>
                             Don't have an account? <a href="/signup">Register</a>
