@@ -11,7 +11,7 @@ Welcome to Cooked, your ultimate culinary companion! Dive into a world of mouthw
 * Express.js: Backend Framework
 * React.js: Frontend Framework
 * Node.js: Server Enviroment
-* Axios: HTTP client for making API request
+* FETCH: HTTP client for making API request
 
 ### API Documentation ###
 * POST /api/user/signup: Register a new user.
