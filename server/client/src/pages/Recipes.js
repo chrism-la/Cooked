@@ -16,7 +16,7 @@ export default function Recipes() {
 
     useEffect(() => {
         const fetchRecipes = async () => {
-            const response = await fetch('http://localhost:4000/api/recipes');
+            const response = await fetch('/api/recipes');
             const data = await response.json();
 
             if (response.ok) {
@@ -46,7 +46,7 @@ export default function Recipes() {
                         ))}
                 </div>
             </RecipeContext.Provider>
-            <Footer/>
+            <Footer />
         </>
     );
 }
