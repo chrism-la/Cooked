@@ -24,7 +24,7 @@ app.use('/api/user', userRoutes);
 // Use the client app
 app.use(express.static('./client/build'));
 
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     return res.sendFile('./client/build/index.html');
 });
 
