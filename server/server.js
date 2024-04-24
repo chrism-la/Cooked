@@ -11,11 +11,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Middleware
-app.use((req, res, next) => {
-    console.log(req.path, req.method);
-    next();
-});
+// // Middleware
+// app.use((req, res, next) => {
+//     console.log(req.path, req.method);
+//     next();
+// });
 
 // Routes
 app.use('/api/recipes', recipeRoutes);

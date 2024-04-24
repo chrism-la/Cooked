@@ -18,7 +18,7 @@ export default function Navbar() {
             <div className="blog-banner">
                 <div>
                     <p>
-                        JOIN OUR BLOG. <a href="/signup">SIGN UP </a>
+                        JOIN OUR BLOG. <Link to="/signup">SIGN UP</Link>
                     </p>
                 </div>
             </div>
