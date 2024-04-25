@@ -1,6 +1,7 @@
 import Card from 'react-bootstrap/Card';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 import '../scss/ShowCard.scss';
-
 
 export default function ShowCard({ recipeData }) {
     return (
@@ -11,13 +12,11 @@ export default function ShowCard({ recipeData }) {
                 <Card.Body>
                     <Card.Title className="text-center">{recipeData.name}</Card.Title>
                     <Card.Text className="text-center">
-                        {recipeData.rating}
-                        {recipeData.ingredients}
-                        {recipeData.directions}
+                        {recipe.rating}
+                        <FontAwesomeIcon icon={faStar} />
                     </Card.Text>
                 </Card.Body>
             </Card>
-            
         </>
     );
 }
