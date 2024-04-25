@@ -12,7 +12,7 @@ export default function ShowCard({ recipeData }) {
                 <Card.Body>
                     <Card.Title className="text-center">{recipeData.name}</Card.Title>
                     <Card.Text className="text-center">
-                        {recipe.rating}
+                        {recipeData.rating}
                         <FontAwesomeIcon icon={faStar} />
                     </Card.Text>
                 </Card.Body>
