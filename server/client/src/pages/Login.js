@@ -40,7 +40,7 @@ export default function LoginForm() {
                     {error && <div className="error">{error}</div>}
                     <div className="register-link">
                         <p>
-                            Don't have an account? <a href="/signup">Register</a>
+                            Don't have an account? <Link to="/signup">Register</Link>
                         </p>
                     </div>
                 </form>

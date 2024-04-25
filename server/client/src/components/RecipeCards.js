@@ -1,5 +1,7 @@
 import '../scss/RecipeCards.scss';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 export default function RecipeCards({ filteredData }) {
     const navigate = useNavigate();
@@ -15,9 +17,10 @@ export default function RecipeCards({ filteredData }) {
                         <img src={recipe.image} alt="Recipe Images"></img>
                     </div>
                     <h2>{recipe.name}</h2>
-                    <h2>{recipe.rating}</h2>
-                    <h2>{recipe.ingredients}</h2>
-                    <h2>{recipe.directions}</h2>
+                    <h2>
+                        {recipe.rating}
+                        <FontAwesomeIcon icon={faStar} />
+                    </h2>
                 </div>
             ))}
         </div>
